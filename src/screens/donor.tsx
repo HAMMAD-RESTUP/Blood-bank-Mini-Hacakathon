@@ -35,6 +35,7 @@ export default function Donor() {
       .then((res: any) => {
         console.log(res);
         setdonor(res);
+        console.log(donor)
       })
       .catch((err: any) => {
         console.log(err);
@@ -109,6 +110,12 @@ export default function Donor() {
       Bloodgroup: '',
     });
   };
+
+  const handleChange = (event: SelectChangeEvent) => {
+    
+    console.log(event.target.value);
+  };
+  console.log(handleChange)
 
   return (
     <>

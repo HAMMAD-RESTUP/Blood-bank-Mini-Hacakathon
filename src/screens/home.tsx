@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import HomeImage from "../assets/bg1.png";

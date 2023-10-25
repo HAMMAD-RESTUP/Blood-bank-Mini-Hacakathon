@@ -33,6 +33,12 @@ export default function SignUp() {
         console.log(err);
       });
   };
+  const handleChange = (event: SelectChangeEvent) => {
+    // Use the event or do something with it
+    console.log(event.target.value);
+  };
+  console.log(handleChange)
+  
 
   return (
     <>

@@ -42,7 +42,8 @@ export let fbSignUp=(body:any)=>{
 
                 body.id = id
                 const referece = ref(db,`users/${id}`)
-                set(referece,body).then(user=>{
+                set(referece,body).then((user:any)=>{
+                    console.log(user)
                     resolve("User Created Successfully")
                 }).catch(error=>{
                     reject(error)
@@ -74,13 +75,17 @@ export let fbAuth=()=>{
    })
 }
 export let fbAdd=(nodeName:string,body:any,id?:string)=>{
+    console.log(id)
     return new Promise((resolve,reject)=>{
         const id = push(ref(db,`${nodeName}/`)).key        
         body.id = id
         const referece = ref(db,`${nodeName}/${body.id}`)
 
-        set(referece,body).then(res=>{
+        set(referece,body).then((res:any)=>{
+            console.log(res)
+      
             resolve("Data Send Successfully")
+          
         }).catch(err=>{
             reject(err)        
         })

@@ -12,12 +12,14 @@ export default function Protected(props: any) {
     setLoader(true);
 
     fbAuth()
-      .then((res) => {
+      .then((res:any) => {
         setLoader(false);
+        console.log(res)
       })
-      .catch((err) => {
+      .catch((err:any) => {
         setLoader(false);
         navigate("/");
+        console.log(err)
       });
   };
 

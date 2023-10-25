@@ -79,6 +79,7 @@ export default function Acceptor() {
         } else if (model.Bloodgroup === "Blood O") {
           navigate("/groupo");
         }
+        console.log(acceptor)
       })
       .catch((err: any) => {
         console.log(err);
@@ -91,6 +92,11 @@ export default function Acceptor() {
         Bloodgroup: '',
       });
   };
+  const handleChange = (event: SelectChangeEvent) => {
+    
+    console.log(event.target.value);
+  };
+  console.log(handleChange)
 
   useEffect(() => {
     fbGet("donor")
